@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" afterDir="false" />
@@ -47,7 +46,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lcsef/Documents/wsLucas/Dev-Java-Marathon&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;52edb5c5473264317833474426dd6a63&quot;
   }
 }</component>
   <component name="RunManager">
@@ -80,6 +81,11 @@
       <updated>1680207746036</updated>
       <workItem from="1680207748072" duration="599000" />
       <workItem from="1680344311091" duration="7257000" />
+      <workItem from="1680655826657" duration="108000" />
+      <workItem from="1680747775680" duration="695000" />
+      <workItem from="1682257352222" duration="126000" />
+      <workItem from="1682367993840" duration="1649000" />
+      <workItem from="1682386548489" duration="1044000" />
     </task>
     <servers />
   </component>

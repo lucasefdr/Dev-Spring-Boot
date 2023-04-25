@@ -5,23 +5,20 @@ import io.github.springboot.service.MovieService;
 import io.github.springboot.util.DateUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("movies") // localhost:8080/movies/
 @Log4j2
 @RequiredArgsConstructor
 public class MovieController {
-    @Autowired
-    private DateUtil dateUtil; // Dependency Injection com Autowired
+    private final DateUtil dateUtil; // Dependency Injection com o @RequiredArgsConstructor
     private final MovieService movieService; // Dependency Injection com o @RequiredArgsConstructor
 
     @GetMapping
@@ -33,5 +30,10 @@ public class MovieController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<Movie> findById(@PathVariable Long id) {
         return ResponseEntity.ok(movieService.findById(id));
+    }
+
+    @PostMapping
+    public ResponseEntity<Movie> save(@RequestBody Movie movie) {
+        return new ResponseEntity<>(movieService.save(movie), HttpStatus.CREATED);
     }
 }
