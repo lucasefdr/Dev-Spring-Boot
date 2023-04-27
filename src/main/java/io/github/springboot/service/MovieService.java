@@ -22,12 +22,19 @@ public class MovieService {
     }
 
     public Movie findById(Long id) {
-        return movies.stream().filter(movie -> movie.getId().equals(id)).findFirst().orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found"));
+        return movies.stream().filter(movie -> movie.getId()
+                .equals(id))
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found"));
     }
 
     public Movie save(Movie movie) {
         movie.setId(ThreadLocalRandom.current().nextLong(3, 1000000));
         movies.add(movie);
         return movie;
+    }
+
+    public void delete(Long id) {
+        movies.remove(findById(id));
     }
 }
