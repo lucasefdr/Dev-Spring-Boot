@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" afterDir="false" />
@@ -19,6 +23,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -52,12 +57,18 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "52edb5c5473264317833474426dd6a63",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.resources: Compose Deployment">
     <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.ApplicationStart" />
@@ -71,8 +82,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="resources: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="src/main/resources/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="resources.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="src/main/resources/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.resources: Compose Deployment" />
+        <item itemvalue="Docker.resources.db: Compose Deployment" />
         <item itemvalue="Spring Boot.ApplicationStart" />
       </list>
     </recent_temporary>
@@ -92,7 +130,10 @@
       <workItem from="1682257352222" duration="126000" />
       <workItem from="1682367993840" duration="1649000" />
       <workItem from="1682386548489" duration="1044000" />
-      <workItem from="1682631928983" duration="1019000" />
+      <workItem from="1682631928983" duration="3784000" />
+      <workItem from="1682692004265" duration="31000" />
+      <workItem from="1682701050455" duration="34000" />
+      <workItem from="1682703595594" duration="945000" />
     </task>
     <servers />
   </component>

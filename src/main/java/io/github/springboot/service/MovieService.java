@@ -22,8 +22,8 @@ public class MovieService {
     }
 
     public Movie findById(Long id) {
-        return movies.stream().filter(movie -> movie.getId()
-                .equals(id))
+        return movies.stream()
+                .filter(movie -> movie.getId().equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found"));
     }
@@ -36,5 +36,10 @@ public class MovieService {
 
     public void delete(Long id) {
         movies.remove(findById(id));
+    }
+
+    public void replace(Movie movie) {
+        delete(movie.getId());
+        movies.add(movie);
     }
 }

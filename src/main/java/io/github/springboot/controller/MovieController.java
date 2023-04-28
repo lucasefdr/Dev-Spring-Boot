@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -34,12 +35,20 @@ public class MovieController {
 
     @PostMapping
     public ResponseEntity<Movie> save(@RequestBody Movie movie) {
-        return new ResponseEntity<>(movieService.save(movie), HttpStatus.CREATED);
+        Movie newMovie = movieService.save(movie);
+        return ResponseEntity.created(URI.create("/movies/" + newMovie.getId())).body(newMovie);
+        // return new ResponseEntity<>(movieService.save(movie), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Void> remove(@PathVariable Long id) {
         movieService.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping
+    public ResponseEntity<Void> replace(@RequestBody Movie movie) {
+        movieService.replace(movie);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
