@@ -8,9 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/domain/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Docker.resources: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.ApplicationStart">
     <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.ApplicationStart" />
@@ -108,9 +107,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ApplicationStart" />
         <item itemvalue="Docker.resources: Compose Deployment" />
         <item itemvalue="Docker.resources.db: Compose Deployment" />
-        <item itemvalue="Spring Boot.ApplicationStart" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +131,7 @@
       <workItem from="1682631928983" duration="3784000" />
       <workItem from="1682692004265" duration="31000" />
       <workItem from="1682701050455" duration="34000" />
-      <workItem from="1682703595594" duration="2069000" />
+      <workItem from="1682703595594" duration="2515000" />
     </task>
     <servers />
   </component>
