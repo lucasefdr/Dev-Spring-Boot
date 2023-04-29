@@ -35,7 +35,7 @@ public class MovieService {
     }
 
     public void replace(Movie movie) {
-        delete(movie.getId());
+        findById(movie.getId());
         repository.save(movie);
     }
 }

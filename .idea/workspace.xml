@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b368a9e-e3c7-4e3d-a8ee-f2801e99e00c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0b368a9e-e3c7-4e3d-a8ee-f2801e99e00c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/repository/MovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +137,7 @@
       <workItem from="1682692004265" duration="31000" />
       <workItem from="1682701050455" duration="34000" />
       <workItem from="1682703595594" duration="3932000" />
-      <workItem from="1682729466124" duration="1017000" />
+      <workItem from="1682729466124" duration="2155000" />
     </task>
     <servers />
   </component>
