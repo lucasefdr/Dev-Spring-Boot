@@ -1,6 +1,7 @@
 package io.github.springboot.controller;
 
 import io.github.springboot.domain.Movie;
+import io.github.springboot.dto.MovieDTO;
 import io.github.springboot.service.MovieService;
 import io.github.springboot.util.DateUtil;
 import lombok.RequiredArgsConstructor;
@@ -34,8 +35,8 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<Movie> save(@RequestBody Movie movie) {
-        Movie newMovie = movieService.save(movie);
+    public ResponseEntity<Movie> save(@RequestBody MovieDTO movieDTO) {
+        Movie newMovie = movieService.save(movieDTO);
         return ResponseEntity.created(URI.create("/movies/" + newMovie.getId())).body(newMovie);
         // return new ResponseEntity<>(movieService.save(movie), HttpStatus.CREATED);
     }
@@ -47,8 +48,8 @@ public class MovieController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> replace(@RequestBody Movie movie) {
-        movieService.replace(movie);
+    public ResponseEntity<Void> replace(@RequestBody MovieDTO movieDTO) {
+        movieService.replace(movieDTO);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

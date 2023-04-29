@@ -1,6 +1,8 @@
 package io.github.springboot.service;
 
 import io.github.springboot.domain.Movie;
+import io.github.springboot.dto.MovieDTO;
+import io.github.springboot.mapper.MovieMapper;
 import io.github.springboot.repository.MovieRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -26,16 +28,16 @@ public class MovieService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found"));
     }
 
-    public Movie save(Movie movie) {
-        return repository.save(movie);
+    public Movie save(MovieDTO movieDTO) {
+        return repository.save(MovieMapper.INSTANCE.toMovie(movieDTO));
     }
 
     public void delete(Long id) {
         repository.deleteById(id);
     }
 
-    public void replace(Movie movie) {
-        findById(movie.getId());
-        repository.save(movie);
+    public void replace(MovieDTO movieDTO) {
+        findById(movieDTO.getId());
+        repository.save(MovieMapper.INSTANCE.toMovie(movieDTO));
     }
 }
