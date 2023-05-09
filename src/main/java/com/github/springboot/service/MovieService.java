@@ -1,15 +1,15 @@
-package io.github.springboot.service;
+package com.github.springboot.service;
 
-import io.github.springboot.domain.Movie;
-import io.github.springboot.dto.MovieDTO;
-import io.github.springboot.mapper.MovieMapper;
-import io.github.springboot.repository.MovieRepository;
+import com.github.springboot.domain.Movie;
+import com.github.springboot.dto.MovieDTO;
+import com.github.springboot.exception.BadRequestException;
+import com.github.springboot.mapper.MovieMapper;
+import com.github.springboot.repository.MovieRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 public class MovieService {
@@ -25,7 +25,15 @@ public class MovieService {
 
     public Movie findById(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Movie not found"));
+                .orElseThrow(() -> new BadRequestException("Movie not found")); // Implementa exceção customizada
+    }
+
+    public List<Movie> findByName(String name) {
+        return repository.findByName(name);
+    }
+
+    public List<Movie> findByNameContais(String text) {
+        return repository.findByNameContains(text);
     }
 
     public Movie save(MovieDTO movieDTO) {

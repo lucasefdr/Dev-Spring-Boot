@@ -1,4 +1,4 @@
-package io.github.springboot.util;
+package com.github.springboot.util;
 
 import org.springframework.stereotype.Component;
 

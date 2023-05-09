@@ -1,4 +1,4 @@
-package io.github.springboot.dto;
+package com.github.springboot.dto;
 
 import lombok.Getter;
 

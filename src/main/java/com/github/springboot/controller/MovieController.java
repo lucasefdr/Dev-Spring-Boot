@@ -1,9 +1,9 @@
-package io.github.springboot.controller;
+package com.github.springboot.controller;
 
-import io.github.springboot.domain.Movie;
-import io.github.springboot.dto.MovieDTO;
-import io.github.springboot.service.MovieService;
-import io.github.springboot.util.DateUtil;
+import com.github.springboot.dto.MovieDTO;
+import com.github.springboot.util.DateUtil;
+import com.github.springboot.domain.Movie;
+import com.github.springboot.service.MovieService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("movies") // localhost:8080/movies/
@@ -32,6 +31,16 @@ public class MovieController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<Movie> findById(@PathVariable Long id) {
         return ResponseEntity.ok(movieService.findById(id));
+    }
+
+    @GetMapping(path = "/findBy")
+    public ResponseEntity<List<Movie>> findByName(@RequestParam(required = false) String name) {
+        return ResponseEntity.ok(movieService.findByName(name));
+    }
+
+    @GetMapping(path = "/findByContains")
+    public ResponseEntity<List<Movie>> findByNameContains(@RequestParam(required = false) String text) {
+        return ResponseEntity.ok(movieService.findByNameContais(text));
     }
 
     @PostMapping

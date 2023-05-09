@@ -1,7 +1,7 @@
-package io.github.springboot.mapper;
+package com.github.springboot.mapper;
 
-import io.github.springboot.domain.Movie;
-import io.github.springboot.dto.MovieDTO;
+import com.github.springboot.dto.MovieDTO;
+import com.github.springboot.domain.Movie;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

@@ -1,4 +1,4 @@
-package io.github.springboot.domain;
+package com.github.springboot.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
