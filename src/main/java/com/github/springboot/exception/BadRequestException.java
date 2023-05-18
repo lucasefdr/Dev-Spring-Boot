@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * Estende de RuntimeException
- * A responsa será um HTTP status = BAD REQUEST
+ * A response será um HTTP status = BAD REQUEST
  */
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class BadRequestException extends RuntimeException{

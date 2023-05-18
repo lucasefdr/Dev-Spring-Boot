@@ -7,6 +7,7 @@ import com.github.springboot.mapper.MovieMapper;
 import com.github.springboot.repository.MovieRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -24,8 +25,7 @@ public class MovieService {
     }
 
     public Movie findById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new BadRequestException("Movie not found")); // Implementa exceção customizada
+        return repository.findById(id).orElseThrow(() -> new BadRequestException("Movie not found")); // Implementa exceção customizada
     }
 
     public List<Movie> findByName(String name) {
@@ -36,16 +36,21 @@ public class MovieService {
         return repository.findByNameContains(text);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public Movie save(MovieDTO movieDTO) {
         return repository.save(MovieMapper.INSTANCE.toMovie(movieDTO));
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void delete(Long id) {
         repository.deleteById(id);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void replace(MovieDTO movieDTO) {
-        findById(movieDTO.getId());
-        repository.save(MovieMapper.INSTANCE.toMovie(movieDTO));
+        Movie savedMovie = findById(movieDTO.getId());
+        Movie movie = MovieMapper.INSTANCE.toMovie(movieDTO);
+        movie.setId(savedMovie.getId());
+        repository.save(movie);
     }
 }

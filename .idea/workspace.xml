@@ -8,17 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/handler/RestExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ApplicationStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ApplicationStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/domain/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/dto/MovieDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/dto/MovieDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/mapper/MovieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/mapper/MovieMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/springboot/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/util/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +71,20 @@
     ]
   }
 }</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.ApplicationStart">
-    <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="Dev-SpringBoot" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.ApplicationStart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.ApplicationStart" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.github.*" />
+          <option name="PATTERN" value="com.github.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,7 +148,10 @@
       <workItem from="1682703595594" duration="3932000" />
       <workItem from="1682729466124" duration="4453000" />
       <workItem from="1682800351705" duration="3589000" />
-      <workItem from="1683590991991" duration="324000" />
+      <workItem from="1683590991991" duration="1029000" />
+      <workItem from="1684259193664" duration="1037000" />
+      <workItem from="1684271119238" duration="10000" />
+      <workItem from="1684430321359" duration="1316000" />
     </task>
     <servers />
   </component>
