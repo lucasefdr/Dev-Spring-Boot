@@ -4,6 +4,7 @@ import com.github.springboot.dto.MovieDTO;
 import com.github.springboot.util.DateUtil;
 import com.github.springboot.domain.Movie;
 import com.github.springboot.service.MovieService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -44,7 +45,7 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<Movie> save(@RequestBody MovieDTO movieDTO) {
+    public ResponseEntity<Movie> save(@Valid @RequestBody MovieDTO movieDTO) {
         Movie newMovie = movieService.save(movieDTO);
         return ResponseEntity.created(URI.create("/movies/" + newMovie.getId())).body(newMovie);
         // return new ResponseEntity<>(movieService.save(movie), HttpStatus.CREATED);
@@ -57,7 +58,7 @@ public class MovieController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> replace(@RequestBody MovieDTO movieDTO) {
+    public ResponseEntity<Void> replace(@Valid @RequestBody MovieDTO movieDTO) {
         movieService.replace(movieDTO);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
