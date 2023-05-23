@@ -10,11 +10,11 @@ import java.util.List;
 
 @Configuration
 public class MoviesWebMvcConfigurer implements WebMvcConfigurer {
-    @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
-        PageableHandlerMethodArgumentResolver pageHandler = new PageableHandlerMethodArgumentResolver();
-        // Retorna a página e a quantidade de itens por página
-        pageHandler.setFallbackPageable(PageRequest.of(0, 5));
-        resolvers.add(pageHandler);
-    }
+//    @Override
+//    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+//        PageableHandlerMethodArgumentResolver pageHandler = new PageableHandlerMethodArgumentResolver();
+//        // Retorna a página e a quantidade de itens por página
+//        pageHandler.setFallbackPageable(PageRequest.of(0, 5));
+//        resolvers.add(pageHandler);
+//    }
 }

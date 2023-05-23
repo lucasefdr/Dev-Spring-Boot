@@ -6,7 +6,9 @@ import com.github.springboot.exception.BadRequestException;
 import com.github.springboot.mapper.MovieMapper;
 import com.github.springboot.repository.MovieRepository;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +24,7 @@ public class MovieService {
 
     // Retorna uma página de Movies
     public Page<Movie> listAll(Pageable pageable) {
+        pageable = PageRequest.of(0, 6, Sort.by("name").ascending());
         return repository.findAll(pageable);
     }
 

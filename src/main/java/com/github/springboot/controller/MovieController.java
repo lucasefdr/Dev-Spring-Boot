@@ -27,7 +27,6 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<Page<Movie>> listMovies(Pageable pageable) {
-        log.info("Log4j2 of DateUtil: " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         return ResponseEntity.ok(movieService.listAll(pageable));
     }
 
