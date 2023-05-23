@@ -28,6 +28,10 @@ public class MovieService {
         return repository.findAll(pageable);
     }
 
+    public List<Movie> listAllNonPageable() {
+        return repository.findAll();
+    }
+
     public Movie findById(Long id) {
         return repository.findById(id).orElseThrow(() -> new BadRequestException("Movie not found")); // Implementa exceção customizada
     }
