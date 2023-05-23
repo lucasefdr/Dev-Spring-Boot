@@ -8,11 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/ExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/ValidationExceptionDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/domain/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestExceptionDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/exception/BadRequestExceptionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/handler/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/handler/RestExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,9 @@
       <workItem from="1683590991991" duration="1029000" />
       <workItem from="1684259193664" duration="1037000" />
       <workItem from="1684271119238" duration="10000" />
-      <workItem from="1684430321359" duration="2924000" />
+      <workItem from="1684430321359" duration="4366000" />
+      <workItem from="1684521796362" duration="602000" />
+      <workItem from="1684844556940" duration="63000" />
     </task>
     <servers />
   </component>
