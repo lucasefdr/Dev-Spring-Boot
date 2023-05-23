@@ -5,10 +5,10 @@ import com.github.springboot.dto.MovieDTO;
 import com.github.springboot.exception.BadRequestException;
 import com.github.springboot.mapper.MovieMapper;
 import com.github.springboot.repository.MovieRepository;
-import org.springframework.http.HttpStatus;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -20,8 +20,9 @@ public class MovieService {
         this.repository = repository;
     }
 
-    public List<Movie> listAll() {
-        return repository.findAll();
+    // Retorna uma página de Movies
+    public Page<Movie> listAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     public Movie findById(Long id) {

@@ -7,6 +7,8 @@ import com.github.springboot.service.MovieService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,10 +26,16 @@ public class MovieController {
     private final MovieService movieService; // Dependency Injection com o @RequiredArgsConstructor
 
     @GetMapping
-    public ResponseEntity<List<Movie>> listMovies() {
+    public ResponseEntity<Page<Movie>> listMovies(Pageable pageable) {
         log.info("Log4j2 of DateUtil: " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-        return ResponseEntity.ok(movieService.listAll());
+        return ResponseEntity.ok(movieService.listAll(pageable));
     }
+
+//    @GetMapping
+//    public ResponseEntity<List<Movie>> listMovies() {
+//        log.info("Log4j2 of DateUtil: " + dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+//        return ResponseEntity.ok(movieService.listAll());
+//    }
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<Movie> findById(@PathVariable Long id) {
