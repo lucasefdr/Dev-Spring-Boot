@@ -1,6 +1,7 @@
 package com.github.springboot.repository;
 
 import com.github.springboot.domain.Movie;
+import jakarta.validation.ConstraintViolationException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,8 +10,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @DisplayName("Tests for Movie repository") // Nome para exibição nos testes
@@ -75,6 +74,7 @@ class MovieRepositoryTest {
         Assertions.assertThat(movies).contains(savedMovie);
     }
 
+    // Teste para validar se uma lista está retornando vazia quando não encontra nada no findByName
     @Test
     @DisplayName("Find by name returns a empty list of movie when no movie is found")
     void findByName_ReturnEmptyList_WhenMovieIsNotFound() {
@@ -82,5 +82,19 @@ class MovieRepositoryTest {
 
         Assertions.assertThat(movies).isEmpty(); // A lista está vazia?
         Assertions.assertThat(movies).isNotNull(); // A lista não é nula?
+    }
+
+    // Teste para validar a exceção de retorno
+    @Test
+    @DisplayName("Save throw ConstraintViolationException when name is empty")
+    void save_ThrowsConstraintViolationException_WhenNameIsEmpty() {
+        Movie movie = new Movie();
+        /*Assertions.assertThatThrownBy(() -> this.movieRepository.save(movie))
+                .isInstanceOf(ConstraintViolationException.class);*/
+
+        Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
+                .isThrownBy(() -> this.movieRepository.save(movie))
+                .withMessageContaining("The movie cannot be null");
+
     }
 }

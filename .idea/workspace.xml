@@ -9,6 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/domain/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/springboot/repository/MovieRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/springboot/repository/MovieRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MovieRepositoryTest.findByName_ReturnEmptyList_WhenMovieIsNotFound">
+  <component name="RunManager" selected="JUnit.MovieRepositoryTest">
+    <configuration name="MovieRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dev-SpringBoot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.springboot.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MovieRepositoryTest.delete_RemovesMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
       <extension name="coverage">
@@ -138,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieRepositoryTest.save_PersistMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieRepositoryTest.save_ThrowsConstraintViolationException_WhenNameIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
       <extension name="coverage">
         <pattern>
@@ -148,23 +164,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
       <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
-      <option name="METHOD_NAME" value="save_PersistMovie_WhenSuccessful" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MovieRepositoryTest.save_UpdatesMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Dev-SpringBoot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.springboot.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
-      <option name="METHOD_NAME" value="save_UpdatesMovie_WhenSuccessful" />
+      <option name="METHOD_NAME" value="save_ThrowsConstraintViolationException_WhenNameIsEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieRepositoryTest" />
+        <item itemvalue="JUnit.MovieRepositoryTest.save_ThrowsConstraintViolationException_WhenNameIsEmpty" />
         <item itemvalue="JUnit.MovieRepositoryTest.findByName_ReturnEmptyList_WhenMovieIsNotFound" />
         <item itemvalue="JUnit.MovieRepositoryTest.findByName_ReturnListOfMovie_WhenSuccessful" />
         <item itemvalue="JUnit.MovieRepositoryTest.delete_RemovesMovie_WhenSuccessful" />
-        <item itemvalue="JUnit.MovieRepositoryTest.save_UpdatesMovie_WhenSuccessful" />
-        <item itemvalue="JUnit.MovieRepositoryTest.save_PersistMovie_WhenSuccessful" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +213,7 @@
       <workItem from="1684430321359" duration="4366000" />
       <workItem from="1684521796362" duration="602000" />
       <workItem from="1684844556940" duration="63000" />
-      <workItem from="1684864952039" duration="10686000" />
+      <workItem from="1684864952039" duration="11854000" />
     </task>
     <servers />
   </component>

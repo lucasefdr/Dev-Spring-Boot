@@ -17,6 +17,7 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull(message = "The movie cannot be null")
     @Column(nullable = false)
     private String name;
 }
