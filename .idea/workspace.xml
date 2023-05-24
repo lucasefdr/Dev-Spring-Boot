@@ -8,10 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a528eebc-811f-4524-8824-5918fff71388" name="Changes" comment="Dependency Injection with Autowired">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/springboot/repository/MovieRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/springboot/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/springboot/repository/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/springboot/repository/MovieRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/springboot/repository/MovieRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,21 +89,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MovieRepositoryTest">
-    <configuration name="SpringClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.springboot.client.SpringClient" />
-      <module name="Dev-SpringBoot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.springboot.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MovieRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MovieRepositoryTest.findByName_ReturnEmptyList_WhenMovieIsNotFound">
+    <configuration name="MovieRepositoryTest.delete_RemovesMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
       <extension name="coverage">
         <pattern>
@@ -115,20 +100,72 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
       <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="delete_RemovesMovie_WhenSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+    <configuration name="MovieRepositoryTest.findByName_ReturnEmptyList_WhenMovieIsNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Dev-SpringBoot" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.ApplicationStart" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.*" />
+          <option name="PATTERN" value="com.github.springboot.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
+      <option name="METHOD_NAME" value="findByName_ReturnEmptyList_WhenMovieIsNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRepositoryTest.findByName_ReturnListOfMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dev-SpringBoot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.springboot.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
+      <option name="METHOD_NAME" value="findByName_ReturnListOfMovie_WhenSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRepositoryTest.save_PersistMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dev-SpringBoot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.springboot.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
+      <option name="METHOD_NAME" value="save_PersistMovie_WhenSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieRepositoryTest.save_UpdatesMovie_WhenSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dev-SpringBoot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.springboot.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.springboot.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.springboot.repository.MovieRepositoryTest" />
+      <option name="METHOD_NAME" value="save_UpdatesMovie_WhenSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,34 +176,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="resources: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="src/main/resources/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="resources.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="src/main/resources/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MovieRepositoryTest" />
-        <item itemvalue="Application.SpringClient" />
-        <item itemvalue="Spring Boot.ApplicationStart" />
-        <item itemvalue="Docker.resources: Compose Deployment" />
-        <item itemvalue="Docker.resources.db: Compose Deployment" />
+        <item itemvalue="JUnit.MovieRepositoryTest.findByName_ReturnEmptyList_WhenMovieIsNotFound" />
+        <item itemvalue="JUnit.MovieRepositoryTest.findByName_ReturnListOfMovie_WhenSuccessful" />
+        <item itemvalue="JUnit.MovieRepositoryTest.delete_RemovesMovie_WhenSuccessful" />
+        <item itemvalue="JUnit.MovieRepositoryTest.save_UpdatesMovie_WhenSuccessful" />
+        <item itemvalue="JUnit.MovieRepositoryTest.save_PersistMovie_WhenSuccessful" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +213,7 @@
       <workItem from="1684430321359" duration="4366000" />
       <workItem from="1684521796362" duration="602000" />
       <workItem from="1684844556940" duration="63000" />
-      <workItem from="1684864952039" duration="8766000" />
+      <workItem from="1684864952039" duration="10686000" />
     </task>
     <servers />
   </component>
